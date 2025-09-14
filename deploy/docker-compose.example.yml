@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  tienda:
+    image: tienda-disiento:latest
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      # Credenciales de Mercado Pago (usar TEST-... para pruebas)
+      - MP_ACCESS_TOKEN=TEST-your-access-token
+      # Origen público absoluto (con https) usado para callbacks
+      - NEXT_PUBLIC_APP_ORIGIN=https://tu-dominio.com
+      # Opcional: excluir métodos/tipos de pago
+      # - MP_EXCLUDE_METHODS=nequi
+      # - MP_EXCLUDE_TYPES=bank_transfer,account_money,wallet
+      # Next.js
+      - NODE_ENV=production
+      - PORT=3000
+    ports:
+      - "3000:3000"
+    volumes:
+      # Persistir órdenes (data/orders.json)
+      - tienda_data:/app/data
+
+volumes:
+  tienda_data:
+

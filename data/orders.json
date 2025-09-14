@@ -1,0 +1,145 @@
+[
+  {
+    "id": "6da50b06-24b0-4886-b8a4-28a9e4eae837",
+    "external_reference": "6da50b06-24b0-4886-b8a4-28a9e4eae837",
+    "status": "pending",
+    "items": [
+      {
+        "title": "Camiseta básica (H) (M)",
+        "quantity": 1,
+        "unit_price": 59000,
+        "picture_url": "/galeria/ropa-accesorios/hombre-camisetas/demo-1.svg"
+      }
+    ],
+    "total": 59000,
+    "payer": {
+      "name": "oscar",
+      "email": "ozcargima@gmail.com"
+    },
+    "mp": {},
+    "createdAt": "2025-09-13T01:24:45.711Z",
+    "updatedAt": "2025-09-13T01:24:45.711Z"
+  },
+  {
+    "id": "0a3c9162-ddb4-40dd-a63a-65ef866363d1",
+    "external_reference": "0a3c9162-ddb4-40dd-a63a-65ef866363d1",
+    "status": "pending",
+    "items": [
+      {
+        "title": "la monda",
+        "quantity": 1,
+        "unit_price": 200000,
+        "picture_url": "/galeria/oleo-pastel/paisajes/1753966297617.jpg"
+      }
+    ],
+    "total": 200000,
+    "payer": {
+      "name": "oscar",
+      "email": "ozcargima@gmail.com"
+    },
+    "mp": {},
+    "createdAt": "2025-09-13T01:35:16.836Z",
+    "updatedAt": "2025-09-13T01:35:16.836Z"
+  },
+  {
+    "id": "a693c51d-eccf-445d-9478-23da30dbe837",
+    "external_reference": "a693c51d-eccf-445d-9478-23da30dbe837",
+    "status": "pending",
+    "items": [
+      {
+        "title": "la monda",
+        "quantity": 1,
+        "unit_price": 200000,
+        "picture_url": "/galeria/oleo-pastel/paisajes/1753966297617.jpg"
+      }
+    ],
+    "total": 200000,
+    "payer": {
+      "name": "oscar",
+      "email": "ozcargima@gmail.com"
+    },
+    "mp": {},
+    "createdAt": "2025-09-13T22:59:33.078Z",
+    "updatedAt": "2025-09-13T22:59:33.078Z"
+  },
+  {
+    "id": "425fd2f6-d89e-41fc-825b-124e46bd6e22",
+    "external_reference": "425fd2f6-d89e-41fc-825b-124e46bd6e22",
+    "status": "pending",
+    "items": [
+      {
+        "title": "la monda",
+        "quantity": 1,
+        "unit_price": 200000,
+        "picture_url": "/galeria/oleo-pastel/paisajes/1753966297617.jpg"
+      }
+    ],
+    "total": 200000,
+    "payer": {
+      "name": "oscar",
+      "email": "ozcargima@gmail.com"
+    },
+    "mp": {},
+    "createdAt": "2025-09-13T23:01:25.183Z",
+    "updatedAt": "2025-09-13T23:01:25.183Z"
+  },
+  {
+    "id": "62f83671-6c75-4c4b-a222-e260142649f7",
+    "external_reference": "62f83671-6c75-4c4b-a222-e260142649f7",
+    "status": "pending",
+    "items": [
+      {
+        "title": "la monda",
+        "quantity": 1,
+        "unit_price": 200000,
+        "picture_url": "/galeria/oleo-pastel/paisajes/1753966297617.jpg"
+      }
+    ],
+    "total": 200000,
+    "mp": {},
+    "createdAt": "2025-09-13T23:05:19.128Z",
+    "updatedAt": "2025-09-13T23:05:19.128Z"
+  },
+  {
+    "id": "31a3152d-0245-4afa-8320-2b39bb6d83e2",
+    "external_reference": "31a3152d-0245-4afa-8320-2b39bb6d83e2",
+    "status": "pending",
+    "items": [
+      {
+        "title": "la monda",
+        "quantity": 1,
+        "unit_price": 200000,
+        "picture_url": "/galeria/oleo-pastel/paisajes/1753966297617.jpg"
+      }
+    ],
+    "total": 200000,
+    "payer": {
+      "name": "oscar",
+      "email": "ozcargima@gmail.com"
+    },
+    "mp": {},
+    "createdAt": "2025-09-14T01:08:19.237Z",
+    "updatedAt": "2025-09-14T01:08:19.237Z"
+  },
+  {
+    "id": "8033f718-a5dd-4a12-95ae-a753535a58e1",
+    "external_reference": "8033f718-a5dd-4a12-95ae-a753535a58e1",
+    "status": "pending",
+    "items": [
+      {
+        "title": "la monda",
+        "quantity": 2,
+        "unit_price": 200000,
+        "picture_url": "/galeria/oleo-pastel/paisajes/1753966297617.jpg"
+      }
+    ],
+    "total": 400000,
+    "payer": {
+      "name": "oscar",
+      "email": "ozcargima@gmail.com"
+    },
+    "mp": {},
+    "createdAt": "2025-09-14T01:24:23.589Z",
+    "updatedAt": "2025-09-14T01:24:23.589Z"
+  }
+]

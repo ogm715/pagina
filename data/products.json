@@ -1,0 +1,24 @@
+[
+  {
+    "id": "01",
+    "title": "la monda",
+    "category": "oleo-pastel",
+    "subcategory": "paisajes",
+    "price": 200000,
+    "size": "50x90",
+    "image": "/galeria/oleo-pastel/paisajes/1753966297617.jpg",
+    "desc": "la moda",
+    "stock": 1
+  },
+  {
+    "id": "02",
+    "title": "la verga",
+    "category": "oleo-pastel",
+    "subcategory": "abstractos",
+    "price": 240000,
+    "size": "100x200",
+    "image": "/galeria/oleo-pastel/abstractos/whatsapp-image-2025-09-13-at-20.57.26.jpeg",
+    "desc": "la verga",
+    "stock": 3
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "mascota.jpg": {
+    "title": "Mascota",
+    "size": "40x50 cm",
+    "desc": "Carboncillo sobre papel libre de ácido",
+    "price": 180000
+  },
+  "carboncillo.jpeg": {
+    "title": "Carboncillo",
+    "size": "50x70 cm",
+    "desc": "Detalle en carboncillo",
+    "price": 220000
+  }
+}
