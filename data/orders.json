@@ -141,5 +141,26 @@
     "mp": {},
     "createdAt": "2025-09-14T01:24:23.589Z",
     "updatedAt": "2025-09-14T01:24:23.589Z"
+  },
+  {
+    "id": "4ce86a2f-ef51-45e4-93ff-9f91b791edc0",
+    "external_reference": "4ce86a2f-ef51-45e4-93ff-9f91b791edc0",
+    "status": "pending",
+    "items": [
+      {
+        "title": "la monda",
+        "quantity": 2,
+        "unit_price": 200000,
+        "picture_url": "/galeria/oleo-pastel/paisajes/1753966297617.jpg"
+      }
+    ],
+    "total": 400000,
+    "payer": {
+      "name": "oscar",
+      "email": "ozcargima@gmail.com"
+    },
+    "mp": {},
+    "createdAt": "2025-09-14T22:36:57.686Z",
+    "updatedAt": "2025-09-14T22:36:57.686Z"
   }
 ]

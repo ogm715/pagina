@@ -30,6 +30,6 @@ COPY --from=build /app/data ./data
 # Expose port and set default command
 ENV PORT=3000
 EXPOSE 3000
-HEALTHCHECK --interval=30s --timeout=5s --retries=5 CMD wget -q -O- http://localhost:3000/api/health >/dev/null 2>&1 || exit 1
+HEALTHCHECK --interval=30s --timeout=5s --retries=5 CMD node -e "http=require('http');http.get('http://localhost:3000/api/health',r=>process.exit(r.statusCode===200?0:1)).on('error',()=>process.exit(1))"
 
 CMD ["npm", "start", "--", "-p", "3000"]

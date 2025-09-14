@@ -41,6 +41,7 @@ This project includes a simple Mercado Pago checkout via redirect. Configure the
 
 - `MP_ACCESS_TOKEN`: Your Mercado Pago access token (production).
 - `NEXT_PUBLIC_APP_ORIGIN` (optional): Absolute origin for callbacks, e.g. `https://tu-dominio.com`. If not set, the server uses the `Origin` header.
+- `NEXT_PUBLIC_ADMIN_USER` / `NEXT_PUBLIC_ADMIN_PASS`: Admin gate for the basic panel (client-visible). Change in production.
 
 API Routes
 
@@ -82,6 +83,8 @@ Use test credentials first. Create a `.env.local` from `.env.local.example` and 
 
 - `MP_ACCESS_TOKEN=TEST-...` (never commit or share real tokens)
 - `NEXT_PUBLIC_APP_ORIGIN=http://localhost:3000`
+- `NEXT_PUBLIC_ADMIN_USER=admin`
+- `NEXT_PUBLIC_ADMIN_PASS=123456`
 
 Run the dev server and use the checkout button. For webhooks on local, start an HTTPS tunnel (e.g. ngrok/cloudflared) and set `NEXT_PUBLIC_APP_ORIGIN` to the tunnel URL. The checkout endpoint sets `notification_url` automatically to `/api/mercadopago/webhook` at that origin.
 
@@ -95,3 +98,29 @@ If some methods fail while your account is being enabled, you can hide them by s
 - `MP_EXCLUDE_TYPES`: comma-separated `payment_type_id` list (e.g. `bank_transfer,wallet`).
 
 These are sent to the Mercado Pago preference as `payment_methods.excluded_*`.
+
+## Deploy with Docker
+
+Build and run with Docker:
+
+```
+docker build -t tienda-disiento:latest .
+docker run -d --name tienda -p 3000:3000 \
+  -e NODE_ENV=production \
+  -e MP_ACCESS_TOKEN=TEST-xxxx \
+  -e NEXT_PUBLIC_APP_ORIGIN=https://www.disiento.com \
+  -v tienda_data:/app/data \
+  tienda-disiento:latest
+```
+
+Or with Compose (recommended):
+
+```
+cp env.example .env # luego edita .env
+docker compose up -d --build
+```
+
+Notes
+- A health endpoint is available at `/api/health` and a container HEALTHCHECK is set.
+- Orders persist under `/app/data` (mounted volume `tienda_data`).
+- Ensure `NEXT_PUBLIC_APP_ORIGIN` points to your public HTTPS domain so Mercado Pago redirects and webhooks work.
