@@ -17,10 +17,11 @@ const CATS = [
 
 export function generateStaticParams() { return [] }
 
-export default function ProductDetail({ params }: { params: { material: string; subcategory: string; file: string } }) {
-  const material = String(params.material)
-  const sub = String(params.subcategory)
-  const file = decodeURIComponent(String(params.file))
+export default async function ProductDetail({ params }: { params: Promise<{ material: string; subcategory: string; file: string }> }) {
+  const { material: m, subcategory: s, file: f } = await params
+  const material = String(m)
+  const sub = String(s)
+  const file = decodeURIComponent(String(f))
   const isValid = MATERIALS.includes(material as any) && CATS.includes(sub as any)
   if (!isValid) return notFound()
 
