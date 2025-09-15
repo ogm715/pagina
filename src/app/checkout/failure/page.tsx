@@ -18,8 +18,8 @@ async function fetchPaymentInfo(id?: string){
   } catch { return null }
 }
 
-export default async function FailurePage({ searchParams }: { searchParams: Promise<Record<string, string>> }){
-  const sp = await searchParams
+export default async function FailurePage({ searchParams }: { searchParams?: Record<string, string | string[] | undefined> }){
+  const sp = searchParams || {}
   const paymentId = sp?.payment_id || sp?.collection_id || ''
   const info = await fetchPaymentInfo(paymentId)
   return (

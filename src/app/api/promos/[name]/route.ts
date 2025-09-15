@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
 
-export async function DELETE(_req: NextRequest, ctx: { params: Promise<{ name: string }> }){
-  const { name } = await ctx.params
+export async function DELETE(_req: NextRequest, ctx: any){
+  const { name } = (ctx?.params || {}) as { name: string }
   const safe = String(name || '').replace(/[^a-zA-Z0-9._-]+/g, '')
   if (!safe) return NextResponse.json({ error: 'invalid name' }, { status: 400 })
   const dir = path.join(process.cwd(), 'public', 'promos')
@@ -16,4 +16,3 @@ export async function DELETE(_req: NextRequest, ctx: { params: Promise<{ name: s
     return NextResponse.json({ error: e?.message || 'delete failed' }, { status: 500 })
   }
 }
-

@@ -9,8 +9,8 @@ async function fetchPayment(id: string, token: string){
   return r.json()
 }
 
-export async function GET(_req: NextRequest, ctx: { params: Promise<{ id: string }> }){
-  const { id } = await ctx.params
+export async function GET(_req: NextRequest, ctx: any){
+  const { id } = (ctx?.params || {}) as { id: string }
   const token = process.env.MP_ACCESS_TOKEN
   if (!token) return NextResponse.json({ error: 'Missing MP_ACCESS_TOKEN' }, { status: 500 })
   try {
@@ -29,4 +29,3 @@ export async function GET(_req: NextRequest, ctx: { params: Promise<{ id: string
     return NextResponse.json({ error: e?.message || 'Unable to fetch payment' }, { status: 502 })
   }
 }
-

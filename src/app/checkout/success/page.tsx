@@ -19,8 +19,8 @@ async function fetchPaymentInfo(id?: string){
   } catch { return null }
 }
 
-export default async function SuccessPage({ searchParams }: { searchParams: Promise<Record<string, string>> }){
-  const sp = await searchParams
+export default async function SuccessPage({ searchParams }: { searchParams?: Record<string, string | string[] | undefined> }){
+  const sp = searchParams || {}
   const ext = sp?.external_reference || ''
   const status = (sp?.status || sp?.collection_status || '').toLowerCase()
   const paymentId = sp?.payment_id || sp?.collection_id || ''
